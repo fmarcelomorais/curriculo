@@ -19,11 +19,19 @@ async function meuCurriculo() {
     
 }
 
-async function cv(curriculos){
-    
+function mask(arr){          
+    let mascara = arr.split('')
+    let a =
+    `(0${mascara[0]}${mascara[1]}) ${mascara[2]}.${mascara[3]}${mascara[4]}${mascara[5]}${mascara[6]}-${mascara[7]}${mascara[8]}${mascara[9]}${mascara[10]}
+    `
+    return a
+}
 
+async function cv(curriculos){    
+    
     // Dados Pessoais
     await curriculos.forEach(x => { 
+        mask(x.contato.telefone)
         let $dadosHTML = ''
         
         async function foto(){
@@ -52,7 +60,7 @@ async function cv(curriculos){
                     <h2>Contato</h2>
                     <div id="contato">
                     <ul >
-                    <li><i class="fab fa-whatsapp mr-2"></i> ${x.contato.telefone}</li>
+                    <li><i class="fab fa-whatsapp mr-2"></i> ${mask(x.contato.telefone)}</li>
                     <li><i class="fas fa-at mr-2"></i> ${x.contato.email}</li>
                     <li><i class="fab fa-github mr-2"></i><a href="${x.contato.git}"> ${x.contato.git}<a/></li>
                     <li><i class="fab fa-linkedin mr-2"></i><a href="${x.contato.linkedin}"> ${x.contato.linkedin}<a/></li>
