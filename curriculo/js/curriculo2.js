@@ -82,7 +82,7 @@ async function cv(curriculos){
                 <div class="idiomas" >
                     <h2>Idiomas</h2>
                     <ul class="ml-3 list-group" id="idioma">
-                    ${x.idiomas.map(item => ` <li class="list-group-item"><i class="far fa-language mr-2"></i>${item}</li>`).join('')}
+                    ${x.idiomas.map(item => ` <li class="list-group-item"><i class="fas fa-language mr-2"></i>${item}</li>`).join('')}
                     </ul>
                 </div>
             </div>
