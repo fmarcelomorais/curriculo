@@ -1,0 +1,181 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+   
+    
+}
+.grid{
+    background-color: rgb(250, 250, 250);
+    display: grid;
+    max-width: 100vw;
+    grid-template-columns: 30% 1fr;
+   
+    grid-template-areas: 
+        'sidebar1 sidebar2'
+    ;
+    
+}
+.sidebarL{
+    grid-area: sidebar1;
+    
+    background-color: rgb(240, 240, 240);
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    padding-bottom: 5%;
+    color: rgb(39, 39, 39);
+    
+}
+.sidebarL img{  
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+    flex-direction: column;
+    margin:0 auto;  
+    padding: 5px;
+    background-color: rgb(255, 255, 255);
+    
+    
+}
+
+.sidebarL .image{
+    margin-top: 2%;
+    width: 20rem;
+    height: 20rem;
+    box-shadow: 5px 5px 5px rgb(87, 87, 87);
+    border-radius: 1%;
+    
+}
+
+.sidebarL ul{
+    list-style: none;
+    font-size: 1.1rem;
+    width: 80%;
+   
+}
+.sidebarL ul li{
+    
+    margin-top: 5px;
+}
+
+#objetivo {
+    width:  100%;
+    font-size: 1.2rem;
+    padding: 5px;
+    
+    background-color: rgb(250, 250, 250);
+}
+
+.sidebarR{
+    grid-area: sidebar2;    
+   
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    padding-bottom: 5%;
+        
+    
+}
+.sidebarR ul{
+    list-style: none;
+    font-size: 1.1rem;
+    width: 80%;
+   
+}
+.sidebarR ul li{
+    
+    margin-top: 5px;
+}
+
+
+.sidebarR .header h2{
+    font-size: 4rem;
+    color: rgb(28, 129, 224);
+
+}
+
+.sidebarR .content{
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.repositorios{
+    display: flex;
+   flex-wrap: wrap;
+    
+}
+.card{
+    width: 45%;
+    margin-left: 1rem;
+    
+}
+
+footer{
+    
+    display: flex;
+    flex-direction: column;
+    
+}   
+.dados{
+    display: flex;
+    
+    justify-content: center;
+    color: rgb(255, 255, 255);
+    padding: 10px;
+    
+
+} 
+.cLogin{
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;
+    margin-top: 20%;
+
+    background-color: rgb(255, 231, 97);
+    height: 300px;
+    width: 35%;
+    padding: 10px;
+
+}
+
+.login{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+}   
+   
+
+/* media */
+
+@media screen and (max-width: 768px){
+    .grid{
+        background-color: rgb(250, 250, 250);
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr; 
+       
+    
+        grid-template-areas:
+        "sidebar1"
+        "sidebar2"      
+        ;
+        
+    }
+    .sidebarL{
+        color: black;
+        background-color: rgb(240, 240, 240);
+    }
+    #objetivo {
+        width:  100%;
+        font-size: 1.2rem;
+        padding: 5px;
+        color: rgb(56, 56, 56);
+    }
+}
+

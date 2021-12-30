@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./curriculo/css/style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
+    <title>Cadastro de Curriculo</title>
+</head>
+<body >
+    <div class="container-fluid">   
+      <nav class="navbar navbar-dark bg-info">
+        <span class="navbar-brand mb-0 h1">My CV {dev} </span>
+        <form class="form-inline">
+          <a href="./curriculo/curriculo.html" class="btn btn-warning my-2 my-sm-0 mr-2" id="btnCurriculo">Curriculo</a>
+          <!-- <input class="form-control mr-sm-2" type="search" id="pesquisar" placeholder="Pesquisar" aria-label="Pesquisar"> -->
+         <!--  <button class="btn btn-outline-success my-2 my-sm-0" id="btnPesquisar">Pesquisar</button> -->
+        </form>
+      </nav>
+      <hr>
+        <h1>Cadastrar Curriculo</h1>   
+        <hr>  
+        <section class="container">
+          <form>
+            <div class="form-group">
+                  <fieldset>
+                    <legend>DADOS PESSOAIS</legend>
+                    <label for="nome">Nome</label>
+                    <input type="text" class="form-control" id="nome" placeholder="Seu Nome">
+                    <label for="dataNascimento">Data de Nascimento</label>
+                    <input type="date" class="form-control" id="dataDeNascimento">
+                    <label for="cargo">Cargo</label>
+                    <input type="text" class="form-control" id="cargo" placeholder="Seu Cargo">
+                  </fieldset>
+                  <script>
+                    
+                  </script>
+                  <fieldset>
+                    <legend>Contatos</legend>
+                    <label for="telefone">Telefone</label>
+                    <input type="text" class="form-control" id="telefone" placeholder="Seu Telefone">
+                    <label for="email">Email</label>
+                    <input type="email" class="form-control" id="email" placeholder="Seu Email">                   
+                      
+                        
+                        <label for="github" id="lblGit">Tem conta no Github: </label>
+                        <input type="checkbox" class="form-check-input ml-3" name="git" id="chbx"  value="true" checked>
+                        <input type="text" class="form-control" id="github" placeholder="Seu github">
+                   
+                    <label for="linkedin">Linkedin</label>
+                    <input type="text" class="form-control" id="linkedin" placeholder="Seu linkedin">
+                    <!-- <label for="foto">Link da imagem</label>
+                    <input type="text" class="form-control" id="foto" placeholder="Link da imagem da foto"> -->
+                  </fieldset>
+
+                  <fieldset class="mt-3">
+                    <legend>ENDEREÇO</legend>
+                    <label for="logradouro">Logradouro</label>
+                    <input type="text" class="form-control mb-3" id="logradouro" placeholder="Rua das papoula, 123, Papoulas">
+                    <label for="bairro">Bairro</label>
+                    <input type="text" class="form-control" id="bairro" placeholder="Bairro das Flores">
+                    <label for="cidade">Cidade</label>
+                    <input type="text" class="form-control" id="cidade" placeholder="Fortaleza">
+                    <label for="estado">Estado</label>
+                    <input type="text" class="form-control" id="estado" placeholder="Ceara">
+                  </fieldset>
+
+                  <fieldset class="mt-3">
+                    <legend>TECNOLOGIAS QUE DOMINO</legend>
+                    <label for="tecnologia">Digite 1 por vez</label>
+                    <input type="text" class="form-control mb-3" id="tecnologia" placeholder="Html, java, css">
+                    <button class="btn btn-primary" onclick="dadosTecnologia(event)" id="btnTecnologia">Incluir</button>
+                  </fieldset>
+
+                  <fieldset class="mt-3">
+                    <legend>IDIOMAS</legend>
+                    <label for="idioma">Digite 1 por vez</label>
+                    <input type="text" class="form-control mb-3" id="idioma" placeholder="Inglês, Espanhol">
+                    <button class="btn btn-primary" onclick="dadosIdioma(event)" id="btnIdioma">Incluir</button>
+                  </fieldset>
+
+                  <fieldset class="mt-3">
+                    <legend>OBJETIVO</legend>                   
+                    <textarea name="objetivo" id="objetivo"></textarea>
+                  </label>
+
+                  </fieldset>
+
+                  <fieldset class="mt-3">
+                    <legend>FORMAÇÃO ACADEMICA</legend>
+                    <label for="formacao">Formação</label>
+                    <input type="text" class="form-control mb-3" id="formacao" placeholder="Analise de sistemas">
+                    <label for="entidade">Entidade Estudantil</label>
+                    <input type="text" class="form-control mb-3" id="entidadeFormacao" placeholder="Faculdade xpto">
+                    <label for="ano">Ano da Formação</label>
+                    <input type="date" class="form-control mb-3" id="anoFormacao" >
+                    <button class="btn btn-primary" onclick="dadosFormacao(event)" id="btnFormacao">Incluir</button>
+                  </fieldset>
+
+                  <fieldset class="mt-3">
+                    <legend>CURSOS COMPLEMENTARES</legend>
+                    <label for="curso">Curso</label>
+                    <input type="text" class="form-control mb-3" id="curso" placeholder="Logica de Programação">
+                    <label for="entidade">Escola</label>
+                    <input type="text" class="form-control mb-3" id="entidadeCurso" placeholder="Algoritimo, Scrum, javascript">
+                    <label for="ano">Ano</label>
+                    <input type="date" class="form-control mb-3" id="anoCurso" >
+                    <button class="btn btn-primary" onclick="dadosCurso(event)" id="btnCurso">Incluir</button>
+                  </fieldset>   
+
+                  <fieldset class="mt-3">
+                    <legend>EXPERIENCIAS</legend>
+                    <label for="cargo">Cargo/Função</label>
+                    <input type="text" class="form-control mb-3" id="cargoExperiencia" placeholder="analista, desenvolvedor">
+                    <label for="empresa">Empresa</label>
+                    <input type="text" class="form-control mb-3" id="empresa" placeholder="analista, desenvolvedor">
+                    <label for="experiencia">Ano Saida</label>
+                    <input type="date" class="form-control mb-3" id="anoSaida" >
+                    <button class="btn btn-primary" onclick="dadosExperiencia(event)" id="btnExperiencia">Incluir</button>
+                  </fieldset>              
+                </div>
+              </form>
+              <button class="btn btn-success" onclick="cadastrar(event)">Cadastrar Curriculo</button>
+        </section>
+        <br>
+        <hr>
+        <main id="curriculo">
+          
+        </main>
+        <footer>
+          <div class="dados bg-dark mt-2">
+            <strong>Desenvolvido por Marcelo Morais</strong> 
+          </div>
+        </footer>
+    </div>
+
+       <!--  <script type="module" src="https://www.gstatic.com/firebasejs/9.6.1/firebase-app.js"></script> -->
+       <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+       <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+
+       <script src="./curriculo/js/firebase.js" ></script>
+       <script src="./curriculo/js/firestore.js" ></script>
+      
+    </body>
+</html>
