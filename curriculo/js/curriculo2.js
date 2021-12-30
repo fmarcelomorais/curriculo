@@ -75,14 +75,14 @@ async function cv(curriculos){
                 <div class="tecnologias">
                     <h2>Tecnologias que Domino</h2>                      
                   <ul class="ml-3 list-group" id="tecno">
-                  ${x.tecnologias.map(item => `<li class="list-group-item"><i class="far fa-file-code mr-2"></i>${item}</li>`)}                 
+                  ${x.tecnologias.map(item => `<li class="list-group-item"><i class="far fa-file-code mr-2"></i>${item}</li>`).join('')}                 
                   </ul>         
                 </div>
                 <hr>
                 <div class="idiomas" >
                     <h2>Idiomas</h2>
                     <ul class="ml-3 list-group" id="idioma">
-                    ${x.idiomas.map(item => ` <li class="list-group-item"><i class="far fa-language mr-2"></i>${item}</li>`)}
+                    ${x.idiomas.map(item => ` <li class="list-group-item"><i class="far fa-language mr-2"></i>${item}</li>`).join('')}
                     </ul>
                 </div>
             </div>
@@ -102,10 +102,10 @@ async function cv(curriculos){
                     <ul class="mt-4" id="formacao">
                     ${x.formacao.map(item => (
                         `<li><strong>${item.formacao}</strong></li>
-                         <li><strong>${item.entidade}</strong></li>
-                         <li><strong>${new Date(item.ano).getFullYear()}</strong></li>`
+                         <li>${item.entidade}</li>
+                         <li>${new Date(item.ano).getFullYear()}</li>`
                   
-                 ))}
+                 )).join('')}
                     </ul> 
                 </div>
             </div>
@@ -113,13 +113,13 @@ async function cv(curriculos){
             <div class="cursos">
                 <h2>CURSOS COMPLEMENTARES</h2>
                 <div class="curso ml-3 mt-4" >
-                    <ul class="mt-4" id="cursos">
+                    <ul class="mt-5" id="cursos">
                     ${x.cursos.map(item => (
-                        `<li><strong>${item.curso}</strong></li>
-                         <li><strong>${item.entidade}</strong></li>
-                         <li><strong>${new Date(item.ano).getFullYear()}</strong></li>`
+                        `<li class="mt-1"> <strong>${item.curso}</strong></li>
+                         <li class="mt-1">${item.entidade}</li>
+                         <li class="mt-1">${new Date(item.ano).getFullYear()}</li>`
                   
-                 ))}
+                 )).join('')}
                     </ul> 
                 </div>
               <hr>
@@ -128,10 +128,10 @@ async function cv(curriculos){
                      <ul class="mt-4" id="experiencia">
                      ${x.experiencias.map(item => (
                         ` <li><strong>${item.cargo}</strong></li>
-                         <li><strong>${item.empresa}</strong></li>
-                         <li><strong>${new Date(item.anoSaida).getFullYear()}</strong></li>`
+                         <li>${item.empresa}</li>
+                         <li>${new Date(item.anoSaida).getFullYear()}</li>`
                   
-                 ))}
+                 )).join('')}
                     </ul> 
                 </div>
                 <hr>
@@ -144,7 +144,7 @@ async function cv(curriculos){
     <h6 class="card-subtitle mb-2 text-muted">${repo.description}</h6> 
     <a href="${repo.html_url}" target="_blank"  class="card-link">Acessar Repositório</a>
   </div>
-</div>`)}
+</div>`).join('')}
             </div>
         </div>
     </div>

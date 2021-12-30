@@ -158,7 +158,7 @@ footer{
         background-color: rgb(250, 250, 250);
         display: grid;
         grid-template-columns: 1fr;
-        grid-template-rows: 1fr; 
+        
        
     
         grid-template-areas:
@@ -176,6 +176,15 @@ footer{
         font-size: 1.2rem;
         padding: 5px;
         color: rgb(56, 56, 56);
+    }
+    .repositorios{
+        display: flex;
+       flex-wrap: wrap;
+        
+    }
+    .card{
+        width: 100%;
+        
     }
 }
 
