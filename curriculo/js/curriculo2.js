@@ -138,11 +138,11 @@ async function cv(curriculos){
                 <h2>REPOSITÓRIOS</h2>
                 <div class="repositorios">
                 ${repos.map(repo => `
-                <div class="card mt-2" >
+                <div class="card" >
   <div class="card-body">
     <h5 class="card-title">${repo.name}</h5>
     <h6 class="card-subtitle mb-2 text-muted">${repo.description}</h6> 
-    <a href="${repo.html_url}" target="_blank"  class="card-link">Acessar Repositório</a>
+    <a href="${repo.html_url}" target="_blank"  class="btn btn-info">Acessar Repositório</a>
   </div>
 </div>`).join('')}
             </div>
